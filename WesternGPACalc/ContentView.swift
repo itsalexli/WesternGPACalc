@@ -189,6 +189,7 @@ struct TableRow: View {
 }
 
 struct GPAResultView: View {
+    
     let gpa: Double
     var body: some View {
         Text(String(format:"%.2f",gpa))
