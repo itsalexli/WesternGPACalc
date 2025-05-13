@@ -47,8 +47,6 @@ struct TableRow: View {
         return gradeSum / creditSum
     }
     
-    
-    /// Converts a percentage grade into a 4.0‑scale GPA
     func gpaFromGrade(_ grade: Double) -> Double {
         if grade >= 90.0 {
             return 4.0
@@ -165,7 +163,7 @@ struct TableRow: View {
             .shadow(radius: 5)
             // “Find GPA” as a NavigationLink
             NavigationLink {
-                var finalGpa: Double = gpaAverage
+                let finalGpa: Double = gpaAverage
                 GPAResultView(gpa: finalGpa)
             } label: {
                 HStack {
@@ -196,6 +194,7 @@ struct GPAResultView: View {
             .font(.largeTitle)
             .navigationTitle("Result")
             .navigationBarTitleDisplayMode(.inline)
+        
     }
 }
 
